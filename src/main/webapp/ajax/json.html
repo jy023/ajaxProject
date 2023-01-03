@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON</title>
+</head>
+<body>
+	<div class="gnb">
+		<ul>
+			<li class="li1">LIST1</li>
+			<li id="li2">LIST1</li>
+			<li>LIST1</li>
+			<li>LIST1</li>
+			<li>LIST1</li>
+		</ul>
+	</div>
+	<script>
+	const li1_1=document.querySelectorAll('.gnb>ul>li');
+		  li1_1[0];// li ->list중에서 첫번째 요소
+	const li1_2=document.querySelectorAll('.li1');// 첫번째 클래스
+	const li1_3=document.querySelector('.li1');// 하나만 있는 클래스
+	
+	//li1_3 클릭 하면 naver로 이동
+	li1_3.addEventListener('click',function(){
+		alert("네이버로 이동합니다.");
+		location.href="http://naver.com";
+	});
+	
+	const gnbLi=document.querySelectorAll('.gnb>ul>li');
+	
+	gnbLi.forEach(function(element){
+		element.style.border="1px solid #ff00ff";
+		element.style.width="100px";
+		element.style.height="100px";
+		console.log(element)
+	});
+	gnbLi.forEach(function(element, index){
+		console.log(element+" "+index)
+	});
+	gnbLi.forEach(function(element, index, list){
+		console.log(element+" "+index+" "+list)
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		// 자바스크립트 객체
+		const obj1 = {
+			//속성: 값		
+			userId : 'm1',
+			userPw : 11,
+			arrColor : [ 'red', 'blue', 'black' ],
+			option : true,
+			//매서드:functon()
+			method1 : function() {
+				console.log('메서드 method1');
+			},
+			//다른 객체:{}
+			obj1Sub : {
+				obj1SubMethod : function() {
+					console.log('메서드 obj1SubMethod');
+				}
+			}
+
+		};
+
+		//new Object();
+		const obj2 = new Object();
+		obj2.name = "m1";
+		obj2.age = 22;
+
+		// 생성자
+		function Obj3(name, age) {
+			this.name = name;
+			this.age = age;
+			this.method3 = function() {
+				console.log('mehtod3');
+			}
+		}
+		const o1 = new Obj3('m1', 11);
+		const o2 = new Obj3('m2', 22);
+		
+		
+		//window.open(‘보여질 웹페이지’, ‘생략’,’width=너비,height =높이 ,left=좌,top=위’)
+	//	window.open('http://naver.com','','width=400,height=400,left=500,top=300')
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		const json1 = {
+			'userId' : 'm1',
+			'userPw' : '11',
+			'userName' : 's1'
+		};
+	</script>
+</body>
+</html>
